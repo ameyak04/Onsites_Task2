@@ -1,0 +1,12 @@
+FROM nginx:latest
+COPY ./nginx.conf /etc/nginx/
+RUN rm /etc/nginx/conf.d/*
+COPY ./web.conf /etc/nginx/conf.d
+COPY ./lb.conf /etc/nginx/conf.d
+RUN mkdir /var/www
+RUN mkdir /var/www/mess21.com
+RUN mkdir /var/www/mess22.com
+RUN mkdir /var/www/mess23.com
+COPY ./mess21.html /var/www/mess21.com/index.html
+COPY ./mess22.html /var/www/mess22.com/index.html
+COPY ./mess23.html /var/www/mess23.com/index.html
