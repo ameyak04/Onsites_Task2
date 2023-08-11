@@ -1,0 +1,17 @@
+Version: '2.18.1'
+services:
+    nginxmess1:
+      image: ghcr.io/ameyak04/deltanginx1onsite
+      container_name: deltacontainernginxmess1
+      ports:
+        - 8081:80
+    nginxmess2:
+      image: ghcr.io/ameyak04/deltanginx2onsite
+      container_name: deltacontainernginxmess2
+      ports:
+        - 8082:80
+    nginxmess3:
+      image: ghcr.io/ameyak04/deltanginx3onsite
+      container_name: deltacontainernginxmess3
+      ports:
+        - 8083:80
