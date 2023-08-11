@@ -1,8 +1,8 @@
 FROM nginx:latest
 COPY ./nginx.conf /etc/nginx/
 RUN rm /etc/nginx/conf.d/*
-COPY ./web.conf /etc/nginx/conf.d
-COPY ./lb.conf /etc/nginx/conf.d
+COPY ./web2.conf /etc/nginx/conf.d
+COPY ./lb2.conf /etc/nginx/conf.d
 RUN mkdir /var/www
 RUN mkdir /var/www/mess21.com
 RUN mkdir /var/www/mess22.com
