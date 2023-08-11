@@ -1,5 +1,4 @@
 FROM nginx:latest
-COPY ./nginx.conf /etc/nginx/
 RUN rm /etc/nginx/conf.d/*
 COPY ./web2.conf /etc/nginx/conf.d
 COPY ./lb2.conf /etc/nginx/conf.d
